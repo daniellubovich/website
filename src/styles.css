@@ -29,10 +29,10 @@ p {
 }
 
 a {
-  color: #5b84a7;
+  color: #477e91;
   text-decoration: none;
   font-family: monospace;
-  display: block;
+  display: inline-block;
 }
 
 li > a:hover {
@@ -65,6 +65,16 @@ li > a:hover {
   margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+  }
+  .footer p {
+    margin: 4px;
+  }
 }
 
 @keyframes fadeIn {
