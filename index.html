@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="styles.css" />
+
+<script type="importmap">
+  {
+    "imports": {
+      "preact": "https://esm.sh/preact@10.19.2",
+      "preact/": "https://esm.sh/preact@10.19.2/",
+      "htm/preact": "https://esm.sh/htm@3.1.1/preact?external=preact"
+    }
+  }
+</script>
+
+<script type="module">
+  import { render } from 'preact'
+  import { useReducer } from 'preact/hooks'
+  import { html } from 'htm/preact'
+  import TitleBar from './components/TitleBar.js'
+  import Section from './components/Section.js'
+  import Footer from './components/Footer.js'
+
+  export function App() {
+    return html`
+      <div id="application">
+        <${TitleBar} title="Daniel Lubovich" />
+        <div id="content">
+          <${Section} title="Work">
+            <ul>
+              <li>
+                <a href="https://github.com/daniellubovich/website">This Site</a>
+              </li>
+            </ul>
+          </${Section}>
+          <${Section} title="Now">
+            <p>Working on this site.</p>
+          </${Section}>
+          <${Section} title="Connect">
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/daniel-lubovich-0a03b090/">LinkedIn</a>
+            </li>
+            <li>
+              <a href="https://github.com/daniellubovich">GitHub</a>
+            </li>
+            </ul>
+          </${Section}>
+        </div>
+        <${Footer} />
+      </div>
+    `
+  }
+
+  render(html`<${App} />`, document.body)
+</script>
