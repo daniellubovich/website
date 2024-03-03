@@ -6,7 +6,8 @@
     "prettier": "^3.2.5"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "mkdir -p dist/src && cp -r src/ dist/src && cp index.html dist/ && echo 'Build complete!'"
   },
   "dependenciesMeta": {
     "prettier@3.2.5": {
