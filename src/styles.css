@@ -3,6 +3,7 @@
 }
 
 html {
+  background-color: #fffaf0;
   font-size: 120%;
   font-family: sans-serif;
 }
@@ -39,7 +40,7 @@ ul {
 }
 
 li {
-  padding-bottom: 4px;
+  padding-bottom: 8px;
 }
 
 a {
@@ -51,7 +52,7 @@ a {
   transition: padding 0.1s;
 }
 
-li > a:hover {
+li.animated > a:hover {
   padding-left: 4px;
   transition: 0.25s;
 }
