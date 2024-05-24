@@ -2,12 +2,34 @@
   --section-fade-in-length: 1.75s;
 }
 
+html {
+  font-size: 120%;
+  font-family: sans-serif;
+}
+
+/* Monospace font for p tags, sans-serif for everything else */
+p {
+  font-family: monospace;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
 #application {
-  width: 100%;
   display: grid;
   row-gap: 10px;
   grid-template-rows: min-content;
   justify-content: center;
+  padding: 1em;
 }
 
 ul {
@@ -18,14 +40,6 @@ ul {
 
 li {
   padding-bottom: 4px;
-}
-
-/* Monospace font for p tags, sans-serif for everything else */
-p {
-  font-family: monospace;
-}
-* {
-  font-family: sans-serif;
 }
 
 a {
