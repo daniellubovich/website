@@ -1,17 +1,34 @@
 {
   "name": "website",
   "packageManager": "yarn@4.1.0",
-  "devDependencies": {
-    "express": "^4.18.3",
-    "prettier": "^3.2.5"
-  },
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "build": "mkdir -p dist && cp -avr src dist/src && cp index.html dist/ && cp favicon.ico dist/ && echo 'Build complete!'"
+    "dev": "vite --port 4200",
+    "build-tsc": "tsc && vite build",
+    "preview": "vite preview --port 4200"
   },
   "dependenciesMeta": {
     "prettier@3.2.5": {
       "unplugged": true
     }
+  },
+  "dependencies": {
+    "htm": "^3.1.1",
+    "preact": "^10.22.0"
+  },
+  "devDependencies": {
+    "@babel/code-frame": "^7.24.6",
+    "@babel/core": "^7.24.6",
+    "@babel/plugin-transform-react-jsx": "^7.24.6",
+    "@babel/plugin-transform-react-jsx-development": "^7.24.6",
+    "@preact/preset-vite": "^2.8.2",
+    "@types/babel__code-frame": "^7",
+    "@types/babel__core": "^7",
+    "babel-plugin-transform-hook-names": "^1.0.2",
+    "prettier": "^3.2.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
   }
 }
