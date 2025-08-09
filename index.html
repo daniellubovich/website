@@ -13,61 +13,18 @@
       import { useReducer } from 'preact/hooks'
       import { html } from 'htm/preact'
       import TitleBar from './src/components/TitleBar.js'
-      import Section from './src/components/Section.js'
       import Footer from './src/components/Footer.js'
+      import HomeContent from './src/content/home.yaml'
+      import Home from './src/components/Home.js'
 
       export function App() {
         return html`
-      <div id="application">
-        <${TitleBar} title="Daniel Lubovich" />
-        <div id="content">
-          <${Section} title="Work">
-            <ul>
-              <li>
-                Senior UI Developer at <a target="_blank" href="https://cradlepoint.com">Cradlepoint -> Ericsson</a> since 2017.
-              </li>
-            </ul>
-          </${Section}>
-          <${Section} title="What I'm Doing Now">
-            <ul>
-              <li>Running for fun. Recently finished the Ogden Marathon with a new PR - <a target="_blank" href="https://www.athlinks.com/event/3446/results/Event/1112653/Course/2612434/Bib/1601">3:29:20</a>!</li>
-              <li>(Very) Ocassionally working on <a target="_blank" href="https://github.com/daniellubovich/website">this site</a>.</li>
-              <li>Reading through Nick Cutter's books:</li>
-              <ul>
-                <li><a target="_blank" href="https://www.goodreads.com/book/show/17571466-the-troop"><i class="check" />The Troop</a></li>
-                <li><a target="_blank" href="https://www.goodreads.com/book/show/21412284-the-deep"><i class="in-progress" />The Deep</a></li>
-                <li><a target="_blank" href="https://www.goodreads.com/book/show/24497842-the-acolyte"><i class="todo" />The Acolyte</a></li>
-                <li><a target="_blank" href="https://www.goodreads.com/book/show/29430791-little-heaven"><i class="todo" />Little Heaven</a></li>
-                <li><a target="_blank" href="https://www.goodreads.com/book/show/55773605-the-breach"><i class="todo" />The Breach</a></li>
-                <li><a target="_blank" href="https://www.goodreads.com/book/show/62919902-the-handyman-method"><i class="todo" />The Handyman Method</a></li>
-                <li><a target="_blank" href="https://www.goodreads.com/book/show/199797559-the-queen"><i class="todo" />The Queen</a></li>
-              </ul>
-            </ul>
-          </${Section}>
-          <${Section} title="Other Projects">
-            <ul>
-              <li>Occasionally tinkering on a <a target="_blank" href="https://flexy.daniellubovich.com">flexbox sandbox</a>. View on <a target="_blank" href="https://github.com/daniellubovich/flexy">Github.</a></li>
-              <li>Building a <a target="_blank" href="https://github.com/daniellubovich/terminal_notes">TUI notes app in Rust</a>.</li>
-              <li>Reading <a target="_blank" href="https://doc.rust-lang.org/book">the Rust book.</a></li>
-            </ul>
-          </${Section}>
-          <${Section} title="Connect">
-            <ul>
-              <li class="animated">
-                <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/daniel-lubovich-0a03b090/">LinkedIn</a>
-              </li>
-              <li class="animated">
-                <a target="_blank" rel="noreferrer" href="https://github.com/daniellubovich">GitHub</a>
-              </li>
-              <li class="animated">
-                <a target="_blank" rel="noreferrer" href="https://www.strava.com/athletes/109300178">Strava</a>
-              </li>
-            </ul>
-          </${Section}>
-        </div>
-        <${Footer} />
-      </div>
-    `
+          <div id="application">
+            <${TitleBar} title="Daniel Lubovich" />
+            <div id="content"><${Home} content=${HomeContent} /></div>
+            <${Footer} />
+          </div>
+        `
       }
 
       render(html`<${App} />`, document.body)

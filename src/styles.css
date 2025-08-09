@@ -45,7 +45,9 @@ ul {
   ul {
     list-style: none;
     margin-left: 1em;
+    margin-top: 1em;
     margin-bottom: 0.5em;
+    font-size: 0.9em;
 
     li {
       padding-bottom: 0.25em;
@@ -92,7 +94,7 @@ a {
   transition: padding 0.1s;
 }
 
-li.animated > a:hover {
+li.animated > span:hover {
   padding-left: 4px;
   transition: 0.25s;
 }
