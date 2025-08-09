@@ -1,5 +1,7 @@
 :root {
   --bg-color-primary: #fffaf0;
+  --bg-color-theme-toggle-icon: #fffaf0;
+  --bg-color-theme-toggle-slider: #333;
   --font-color-link: #477e91;
   --font-color-primary: #333;
   --font-family-content: monospace;
@@ -8,8 +10,18 @@
   --font-size-h2: 1.5rem;
   --font-size-h3: 1.25rem;
   --font-size-primary: 120%;
+  --icon-color-check: darkseagreen;
+  --icon-color-in-progress: orange;
+  --icon-color-todo: gray;
   --section-fade-in-length: 1.75s;
+}
 
+[data-theme='dark'] {
+  --bg-color-primary: #2e2e2e;
+  --bg-color-theme-toggle-icon: #333;
+  --bg-color-theme-toggle-slider: #fffaf0;
+  --font-color-link: #84cce4;
+  --font-color-primary: #d3d3d3;
   --icon-color-check: darkseagreen;
   --icon-color-in-progress: orange;
   --icon-color-todo: gray;
@@ -20,6 +32,10 @@ html {
   background-color: var(--bg-color-primary);
   font-size: var(--font-size-primary);
   font-family: var(--font-family-primary);
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 #application {
@@ -56,6 +72,65 @@ a {
 }
 
 /* app styling */
+
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+
+  --padding-theme-toggle: 4px;
+  --width-theme-toggle: 1em;
+  --height-theme-toggle: 0.5em;
+
+  .theme-toggle {
+    label {
+      display: flex;
+      align-items: center;
+    }
+
+    input[type='checkbox'] {
+      display: none;
+
+      &:checked + .slider {
+        background-color: var(--bg-color-theme-toggle-slider);
+
+        &::before {
+          transform: translateX(
+            calc(
+              (
+                calc(var(--width-theme-toggle) / 2) -
+                  var(--padding-theme-toggle)
+              )
+            )
+          );
+        }
+      }
+    }
+
+    .slider {
+      position: relative;
+      width: var(--width-theme-toggle);
+      height: calc(var(--height-theme-toggle) + var(--padding-theme-toggle));
+      background-color: var(--bg-color-theme-toggle-slider);
+      border-radius: var(--padding-theme-toggle);
+      transition: background-color 0.2s;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: calc(var(--width-theme-toggle) / 2);
+        height: var(--height-theme-toggle);
+        background-color: var(--bg-color-theme-toggle-icon);
+        border-radius: var(--padding-theme-toggle);
+        transition: transform 0.2s;
+      }
+    }
+  }
+}
+
 ul {
   list-style: none;
   padding: 0;

@@ -28,9 +28,9 @@ const renderItem = function (item) {
 
   return html`
     <li class=${item.className || ''}>
-      ${statusIcon}
-      <span dangerouslySetInnerHTML=${{ __html: item.text }} />
-      ${children}
+      ${statusIcon}<span
+        dangerouslySetInnerHTML=${{ __html: item.text }}
+      />${children}
     </li>
   `
 }

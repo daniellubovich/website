@@ -5,8 +5,8 @@ sections:
 
   - title: What I'm Doing Now
     items:
-      - text: Running for fun. Recently finished the Ogden Marathon with a new PR - <a target="_blank" rel="noreferrer" href="https://www.athlinks.com/event/3446/results/Event/1112653/Course/2612434/Bib/1601">3:29:20</a>!
-      - text: (Very) Occasionally working on <a target="_blank" rel="noreferrer" href="https://github.com/daniellubovich/website">this site</a>.
+      - text: Running for fun. Recently finished the Ogden Marathon with a new PR - <a target="_blank" rel="noreferrer" href="https://www.athlinks.com/event/3446/results/Event/1112653/Course/2612434/Bib/1601">3:29:20!</a>
+      - text: (Very) Occasionally working on <a target="_blank" rel="noreferrer" href="https://github.com/daniellubovich/website">this site.</a>
       - text: "Reading through Nick Cutter's books:"
         items:
           - text: '<a target="_blank" rel="noreferrer" href="https://www.goodreads.com/book/show/17571466-the-troop">The Troop</a>'
@@ -34,9 +34,9 @@ sections:
 
   - title: Other Projects
     items:
-      - text: Occasionally tinkering on a <a target="_blank" rel="noreferrer" href="https://flexy.daniellubovich.com">flexbox sandbox</a>. View on <a target="_blank" rel="noreferrer" href="https://github.com/daniellubovich/flexy">Github</a>.
-      - text: Building a <a target="_blank" rel="noreferrer" href="https://github.com/daniellubovich/terminal_notes">TUI notes app in Rust</a>.
-      - text: Reading <a target="_blank" rel="noreferrer" href="https://doc.rust-lang.org/book">the Rust book</a>.
+      - text: Occasionally tinkering on a <a target="_blank" rel="noreferrer" href="https://flexy.daniellubovich.com">flexbox sandbox.</a> View on <a target="_blank" rel="noreferrer" href="https://github.com/daniellubovich/flexy">Github.</a>
+      - text: Building a <a target="_blank" rel="noreferrer" href="https://github.com/daniellubovich/terminal_notes">TUI notes app in Rust.</a>
+      - text: Reading <a target="_blank" rel="noreferrer" href="https://doc.rust-lang.org/book">the Rust book.</a>
 
   - title: Connect
     items:
