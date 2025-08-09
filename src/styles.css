@@ -37,10 +37,50 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+
+  li {
+    padding-bottom: 1em;
+  }
+
+  ul {
+    list-style: none;
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+
+    li {
+      padding-bottom: 0.25em;
+    }
+  }
 }
 
-li {
-  padding-bottom: 8px;
+i {
+  &::before {
+    /* Common styles for all icons */
+    font-size: 20px;
+    margin-right: 0.5em;
+    padding: 0;
+    line-height: 20px;
+    height: 20px;
+    display: inline-block;
+  }
+
+  &.check::before {
+    /* Filled circle icon */
+    content: '\25CF';
+    color: darkseagreen;
+  }
+
+  &.in-progress::before {
+    /* Filled circle icon */
+    content: '\25CF';
+    color: orange;
+  }
+
+  &.todo::before {
+    /* To-do icon */
+    content: '\25CB'; /* Empty circle */
+    color: gray;
+  }
 }
 
 a {
