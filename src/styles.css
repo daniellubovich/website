@@ -1,28 +1,25 @@
 :root {
+  --bg-color-primary: #fffaf0;
+  --font-color-link: #477e91;
+  --font-color-primary: #333;
+  --font-family-content: monospace;
+  --font-family-primary: sans-serif;
+  --font-size-h1: 2rem;
+  --font-size-h2: 1.5rem;
+  --font-size-h3: 1.25rem;
+  --font-size-primary: 120%;
   --section-fade-in-length: 1.75s;
+
+  --icon-color-check: darkseagreen;
+  --icon-color-in-progress: orange;
+  --icon-color-todo: gray;
 }
 
 html {
-  background-color: #fffaf0;
-  font-size: 120%;
-  font-family: sans-serif;
-}
-
-/* Monospace font for p tags, sans-serif for everything else */
-p {
-  font-family: monospace;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-}
-
-h3 {
-  font-size: 1.25rem;
+  color: var(--font-color-primary);
+  background-color: var(--bg-color-primary);
+  font-size: var(--font-size-primary);
+  font-family: var(--font-family-primary);
 }
 
 #application {
@@ -33,6 +30,32 @@ h3 {
   padding: 1em;
 }
 
+p {
+  font-family: var(--font-family-content);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+a {
+  color: var(--font-color-link);
+  text-decoration: none;
+  font-family: var(--font-family-content);
+  display: inline-block;
+  padding-left: 0;
+  transition: padding 0.1s;
+}
+
+/* app styling */
 ul {
   list-style: none;
   padding: 0;
@@ -66,32 +89,23 @@ i {
     display: inline-block;
   }
 
-  &.check::before {
+  &.done::before {
     /* Filled circle icon */
     content: '\25CF';
-    color: darkseagreen;
+    color: var(--icon-color-check);
   }
 
   &.in-progress::before {
     /* Filled circle icon */
     content: '\25CF';
-    color: orange;
+    color: var(--icon-color-in-progress);
   }
 
   &.todo::before {
-    /* To-do icon */
-    content: '\25CB'; /* Empty circle */
-    color: gray;
+    /* Empty icon */
+    content: '\25CB';
+    color: var(--icon-color-todo);
   }
-}
-
-a {
-  color: #477e91;
-  text-decoration: none;
-  font-family: monospace;
-  display: inline-block;
-  padding-left: 0;
-  transition: padding 0.1s;
 }
 
 li.animated > span:hover {
@@ -132,6 +146,7 @@ li.animated > span:hover {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+/* animations */
 @media screen and (max-width: 600px) {
   .footer {
     grid-template-columns: 1fr;

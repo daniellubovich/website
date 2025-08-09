@@ -7,7 +7,7 @@ const renderItem = function (item) {
   let statusIcon
   switch (item.status) {
     case 'done':
-      statusIcon = html`<i class="check" />`
+      statusIcon = html`<i class="done" />`
       break
     case 'in-progress':
       statusIcon = html`<i class="in-progress" />`
@@ -17,7 +17,7 @@ const renderItem = function (item) {
       break
   }
 
-  let children = ''
+  let children
   if (item.items) {
     children = html`
       <ul>
@@ -26,7 +26,6 @@ const renderItem = function (item) {
     `
   }
 
-  // Add className if present
   return html`
     <li class=${item.className || ''}>
       ${statusIcon}
@@ -38,17 +37,14 @@ const renderItem = function (item) {
 
 export default class Home extends Component {
   render({ content }) {
-    const sections = []
-    for (const section of content.sections) {
-      sections.push(html`
-          <${Section} title=${section.title}>
-            <ul>
-              ${section.items.map(renderItem)}
-            </ul>
-          </${Section}>
-          `)
-    }
-
-    return sections
+    return content.sections.map((section) => {
+      return html`
+        <${Section} title=${section.title}>
+          <ul>
+            ${section.items.map(renderItem)}
+          </ul>
+        </${Section}>
+      `
+    })
   }
 }
