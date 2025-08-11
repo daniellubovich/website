@@ -15,6 +15,9 @@ const renderItem = function (item) {
     case 'todo':
       statusIcon = html`<i class="todo" />`
       break
+    case 'pending':
+      statusIcon = html`<i class="pending" />`
+      break
   }
 
   let children

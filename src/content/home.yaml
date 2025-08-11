@@ -16,9 +16,9 @@ sections:
           - text: '<a target="_blank" rel="noreferrer" href="https://www.goodreads.com/book/show/21412284-the-deep">The Deep</a>'
             className: animated
             status: done
-          - text: '<a target="_blank" rel="noreferrer" href="https://www.goodreads.com/book/show/24497842-the-acolyte">The Acolyte</a>'
-            className: animated
-            status: todo
+          - text: '<a target="_blank" rel="noreferrer" href="https://www.goodreads.com/book/show/24497842-the-acolyte">The Acolyte [apparently out of print]</a>'
+            className: animated emphasis
+            status: pending
           - text: '<a target="_blank" rel="noreferrer" href="https://www.goodreads.com/book/show/29430791-little-heaven">Little Heaven</a>'
             className: animated
             status: in-progress

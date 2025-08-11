@@ -15,22 +15,8 @@
 
     <script type="module">
       import { render } from 'preact'
-      import { useReducer } from 'preact/hooks'
       import { html } from 'htm/preact'
-      import TitleBar from './src/components/TitleBar.js'
-      import Footer from './src/components/Footer.js'
-      import HomeContent from './src/content/home.yaml'
-      import Home from './src/components/Home.js'
-
-      export function App() {
-        return html`
-          <div id="application">
-            <${TitleBar} title="Daniel Lubovich" />
-            <div id="content"><${Home} content=${HomeContent} /></div>
-            <${Footer} />
-          </div>
-        `
-      }
+      import App from './src/components/App.js'
 
       render(html`<${App} />`, document.body)
     </script>
