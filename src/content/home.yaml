@@ -21,10 +21,10 @@ sections:
             status: pending
           - text: '<a target="_blank" rel="noreferrer" href="https://www.goodreads.com/book/show/29430791-little-heaven">Little Heaven</a>'
             className: animated
-            status: in-progress
+            status: done
           - text: '<a target="_blank" rel="noreferrer" href="https://www.goodreads.com/book/show/55773605-the-breach">The Breach</a>'
             className: animated
-            status: todo
+            status: in-progress
           - text: '<a target="_blank" rel="noreferrer" href="https://www.goodreads.com/book/show/62919902-the-handyman-method">The Handyman Method</a>'
             className: animated
             status: todo
