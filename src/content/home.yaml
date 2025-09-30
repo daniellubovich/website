@@ -27,10 +27,10 @@ sections:
             status: done
           - text: '<a target="_blank" rel="noreferrer" href="https://www.goodreads.com/book/show/62919902-the-handyman-method">The Handyman Method</a>'
             className: animated
-            status: in-progress
+            status: done
           - text: '<a target="_blank" rel="noreferrer" href="https://www.goodreads.com/book/show/199797559-the-queen">The Queen</a>'
             className: animated
-            status: todo
+            status: in-progress
 
   - title: Other Projects
     items:
@@ -46,4 +46,5 @@ sections:
         className: animated
       - text: '<a target="_blank" rel="noreferrer" href="https://www.strava.com/athletes/109300178">Strava</a>'
         className: animated
+
 
