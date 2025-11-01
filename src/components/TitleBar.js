@@ -13,7 +13,7 @@ export default class TitleBar extends Component {
             type="checkbox"
             id="theme-toggle"
             checked=${currentTheme === 'dark'}
-            onclick=${this.toggleTheme}
+            onClick=${this.toggleTheme}
           />
           <span class="slider-container"></span>
         </label>
